@@ -17,7 +17,7 @@ function Contact() {
             return;
         }
         swal({
-            title: "Name: " + name + "Lastname: " + "Phone number: " + phoneNumber + "Message: " + message,
+            itle: "Name:" +" "+ name + " Lastname:" +" " +lastName + " Phone number:" + " " +phoneNumber + " Message:" + " " +message,
             icon: "info",
             button: "OK!",
         });
