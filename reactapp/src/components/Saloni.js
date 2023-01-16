@@ -26,8 +26,10 @@ function Saloni(props) {
     }, []);
 
     return (
-        <div>
-            <table className="table table-bordered table-hover" id="tbl-sln">
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                <table className="table table-bordered table-hover" id="tbl-sln">
                 <thead >
                     <tr className="table-primary">
                         <th >Naziv</th>
@@ -51,6 +53,9 @@ function Saloni(props) {
                     })}
                 </tbody>
             </table>
+                </div>
+            </div>
+            
         </div >
     )
 }
