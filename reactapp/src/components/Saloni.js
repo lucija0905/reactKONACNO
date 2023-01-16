@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import swal from 'sweetalert';
 
 function Saloni(props) {
 
@@ -7,10 +8,20 @@ function Saloni(props) {
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/salon').then(odgovor => {
+
             setSviSaloni(odgovor.data.data);
-            alert(props.uspeh)
+            swal({
+                title: props.uspeh,
+                icon: "info",
+                button: "OK!",
+            });
+
         }).catch(error => {
-            alert(props.neuspeh + error);
+            swal({
+                title: props.neuspeh,
+                icon: "error",
+                button: "OK!",
+            });
         });
     }, []);
 
